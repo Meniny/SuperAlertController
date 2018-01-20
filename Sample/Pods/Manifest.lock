@@ -1,0 +1,16 @@
+PODS:
+  - SuperAlertController (1.0.0)
+
+DEPENDENCIES:
+  - SuperAlertController (from `../`)
+
+EXTERNAL SOURCES:
+  SuperAlertController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SuperAlertController: 5963352abedf8777a274c71e28cd6a2469ec9f17
+
+PODFILE CHECKSUM: f84da238c075013b919d2c05bee492672c5de031
+
+COCOAPODS: 1.4.0
