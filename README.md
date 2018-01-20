@@ -22,6 +22,10 @@
 
 `SuperAlertController` is an `UIAlertController` extension.
 
+## Extensions
+
+* [SuperAlertControllerPickers](https://github.com/Meniny/SuperAlertController-Pickers/)
+
 ## Requirements
 
 * iOS 9.0+
