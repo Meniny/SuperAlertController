@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestContentViewController" customModule="Sample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hcP-86-75n">
+                    <rect key="frame" x="127" y="283" width="121" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="0er-3X-L36"/>
+                        <constraint firstAttribute="width" secondItem="hcP-86-75n" secondAttribute="height" multiplier="121:27" id="7pL-T3-QZm"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDT-Xf-raQ">
+                    <rect key="frame" x="163" y="318" width="51" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="P4H-Bu-2fP"/>
+                        <constraint firstAttribute="width" secondItem="aDT-Xf-raQ" secondAttribute="height" multiplier="49:31" id="zs7-pW-JWZ"/>
+                    </constraints>
+                </switch>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="u6G-Og-WcI">
+                    <rect key="frame" x="6" y="357" width="363" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="Yxy-Of-b5X"/>
+                    </constraints>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="u6G-Og-WcI" firstAttribute="centerX" secondItem="aDT-Xf-raQ" secondAttribute="centerX" id="MPC-EO-91j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u6G-Og-WcI" secondAttribute="trailing" constant="8" id="WYK-0s-Jaj"/>
+                <constraint firstItem="u6G-Og-WcI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Wtw-7g-a18"/>
+                <constraint firstItem="aDT-Xf-raQ" firstAttribute="centerX" secondItem="hcP-86-75n" secondAttribute="centerX" id="X0e-z8-Q25"/>
+                <constraint firstItem="u6G-Og-WcI" firstAttribute="top" secondItem="aDT-Xf-raQ" secondAttribute="bottom" constant="8" id="koj-xN-DnT"/>
+                <constraint firstItem="aDT-Xf-raQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="lLd-va-Fb0"/>
+                <constraint firstItem="hcP-86-75n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oUy-iK-R8v"/>
+                <constraint firstItem="aDT-Xf-raQ" firstAttribute="top" secondItem="hcP-86-75n" secondAttribute="bottom" constant="8" id="uFB-8p-KKc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

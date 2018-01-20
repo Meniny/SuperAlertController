@@ -2,6 +2,9 @@
 import UIKit
 import AudioToolbox
 
+/// Same as `UIAlertController`
+public typealias SuperAlertController = UIAlertController
+
 // MARK: - Initializers
 extension UIAlertController {
 	
