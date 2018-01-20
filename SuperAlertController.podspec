@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SuperAlertController'
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "An UIAlertController extension."
   s.homepage         = "https://github.com/Meniny/SuperAlertController"
   s.license          = { :type => "MIT", :file => "LICENSE.md" }

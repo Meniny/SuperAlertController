@@ -28,6 +28,10 @@
 		5C635FDA2013A08400979833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C635FFE2013A7FF00979833 /* TestContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContentViewController.swift; sourceTree = "<group>"; };
 		5C635FFF2013A7FF00979833 /* TestContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestContentViewController.xib; sourceTree = "<group>"; };
+		5C6360022013ACBE00979833 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5C6360032013ACBE00979833 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
+		5C6360042013ACBE00979833 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		5C6360052013ACBE00979833 /* SuperAlertController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = SuperAlertController.podspec; path = ../SuperAlertController.podspec; sourceTree = "<group>"; };
 		94026FBB8F6B8DAFA9AB53B5 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		F8225882150C9EDBCA79A7B9 /* Pods_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,6 +68,10 @@
 		5C635FC22013A08400979833 = {
 			isa = PBXGroup;
 			children = (
+				5C6360032013ACBE00979833 /* LICENSE.md */,
+				5C6360042013ACBE00979833 /* Package.swift */,
+				5C6360022013ACBE00979833 /* README.md */,
+				5C6360052013ACBE00979833 /* SuperAlertController.podspec */,
 				5C635FCD2013A08400979833 /* Sample */,
 				5C635FCC2013A08400979833 /* Products */,
 				496A0E8E10C750A37A44A0C8 /* Pods */,
