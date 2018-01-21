@@ -137,10 +137,14 @@ extension UIAlertController {
     public func hide(animated: Bool = true, completion: (() -> Void)?) {
         DispatchQueue.main.async {
             self.dismiss(animated: animated, completion: {
-                UIAlertControllerSemaphore.signal()
+                self.quitQueue()
                 completion?()
             })
         }
+    }
+    
+    public func quitQueue() {
+        UIAlertControllerSemaphore.signal()
     }
     
     /// Add an action to Alert
@@ -185,8 +189,7 @@ extension UIAlertController {
     internal func setTitle(font: UIFont, color: UIColor) {
         guard let title = self.title else { return }
         let attributes: [NSAttributedStringKey: Any] = [.font: font, .foregroundColor: color]
-        let attributedTitle = NSMutableAttributedString(string: title, attributes: attributes)
-        setValue(attributedTitle, forKey: "attributedTitle")
+        self.attributedTitle = NSMutableAttributedString(string: title, attributes: attributes)
     }
     
     /// Set alert's title, font and color
@@ -197,6 +200,15 @@ extension UIAlertController {
     ///   - color: alert title color
     public func setAttributedTitle(_ title: String?, font: UIFont, color: UIColor) {
         set(title: title, font: font, color: color)
+    }
+    
+    public var attributedTitle: NSAttributedString? {
+        get {
+            return self.value(forKey: "attributedTitle") as? NSAttributedString
+        }
+        set {
+            self.setValue(newValue, forKey: "attributedTitle")
+        }
     }
     
     /// Set alert's message, font and color
@@ -215,8 +227,16 @@ extension UIAlertController {
     internal func setMessage(font: UIFont, color: UIColor) {
         guard let message = self.message else { return }
         let attributes: [NSAttributedStringKey: Any] = [.font: font, .foregroundColor: color]
-        let attributedMessage = NSMutableAttributedString(string: message, attributes: attributes)
-        setValue(attributedMessage, forKey: "attributedMessage")
+        self.attributedMessage = NSMutableAttributedString(string: message, attributes: attributes)
+    }
+    
+    public var attributedMessage: NSAttributedString? {
+        get {
+            return self.value(forKey: "attributedMessage") as? NSAttributedString
+        }
+        set {
+            self.setValue(newValue, forKey: "attributedMessage")
+        }
     }
     
     /// Set alert's message, font and color
@@ -229,6 +249,15 @@ extension UIAlertController {
         set(message: message, font: font, color: color)
     }
     
+    public var contentViewController: UIViewController? {
+        get {
+            return self.value(forKey: "contentViewController") as? UIViewController
+        }
+        set {
+            self.setValue(newValue, forKey: "contentViewController")
+        }
+    }
+    
     /// Set alert's content viewController
     ///
     /// - Parameters:
@@ -236,7 +265,7 @@ extension UIAlertController {
     ///   - height: height of content viewController
     internal func set(vc: UIViewController?, width: CGFloat? = nil, height: CGFloat? = nil) {
         guard let vc = vc else { return }
-        setValue(vc, forKey: "contentViewController")
+        self.contentViewController = vc
         if let height = height {
             vc.preferredContentSize.height = height
             preferredContentSize.height = height
@@ -246,10 +275,10 @@ extension UIAlertController {
     /// Set alert's content viewController
     ///
     /// - Parameters:
-    ///   - contentViewController: ViewController
+    ///   - content: Content ViewController
     ///   - height: height of content viewController
-    public func setContentViewController(_ contentViewController: UIViewController?, height: CGFloat? = nil) {
-        set(vc: contentViewController, width: nil, height: height)
+    public func setContentViewController(_ content: UIViewController?, height: CGFloat? = nil) {
+        set(vc: content, width: nil, height: height)
     }
 }
 
