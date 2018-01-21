@@ -69,6 +69,8 @@ public typealias SuperAlertController = UIAlertController
 
 // MARK: - Initializers
 extension UIAlertController {
+    
+    public static var width: CGFloat = 270
 	
     /// Create new alert view controller.
     ///
@@ -262,6 +264,7 @@ extension UIAlertController {
     ///
     /// - Parameters:
     ///   - vc: ViewController
+    ///   - width: width of content viewController
     ///   - height: height of content viewController
     internal func set(vc: UIViewController?, width: CGFloat? = nil, height: CGFloat? = nil) {
         guard let vc = vc else { return }
@@ -270,15 +273,20 @@ extension UIAlertController {
             vc.preferredContentSize.height = height
             preferredContentSize.height = height
         }
+        if let width = width {
+            vc.preferredContentSize.width = width
+            preferredContentSize.width = width
+        }
     }
     
     /// Set alert's content viewController
     ///
     /// - Parameters:
     ///   - content: Content ViewController
+    ///   - width: width of content viewController
     ///   - height: height of content viewController
-    public func setContentViewController(_ content: UIViewController?, height: CGFloat? = nil) {
-        set(vc: content, width: nil, height: height)
+    public func setContentViewController(_ content: UIViewController?, width: CGFloat? = nil, height: CGFloat? = nil) {
+        set(vc: content, width: width, height: height)
     }
 }
 
