@@ -24,7 +24,7 @@
 
 ## Extensions
 
-* [SuperAlertControllerPickers](https://github.com/Meniny/SuperAlertController-Pickers/)
+* [SuperAlertControllerExtensions](https://github.com/Meniny/SuperAlertController-Extensions/)
 
 ## Requirements
 
