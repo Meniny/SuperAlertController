@@ -96,7 +96,7 @@ public extension UIViewController {
     
     @discardableResult
     public func dismiss(alertContrller: SuperAlertController, animated: Bool = true, completion: (() -> Void)? = nil) -> UIAlertController {
-        alertContrller.hide(animated: animated, completion: completion)
+        alertContrller.hide(completion: completion)
         return alertContrller
     }
 }
@@ -134,7 +134,7 @@ public extension UIViewController {
                     UIAlertControllerSemaphore.signal()
                     act(index, a, alertController)
                 } else {
-                    alertController.hide(animated: true, completion: nil)
+                    alertController.hide(completion: nil)
                 }
             }
             return c

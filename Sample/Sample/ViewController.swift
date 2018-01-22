@@ -21,9 +21,7 @@ class ViewController: UIViewController {
         let azure = #colorLiteral(red: 0.05, green:0.49, blue:0.98, alpha:1.00)
         let alertController = SuperAlertController.init(style: .alert, source: self.view, title: "Testing", message: "This is a testing alert controller", tintColor: azure)
         alertController.setContentViewController(contentController, height: 150)
-        alertController.addAction(image: nil, title: "Done", color: azure, style: .cancel, isEnabled: true) { (action) in
-            alertController.hide(animated: true, completion: nil)
-        }
+        alertController.addAction(image: nil, title: "Done", color: azure, style: .cancel, isEnabled: true, handler: nil)
         alertController.show(animated: true, vibrate: true, serial: false, completion: nil)
     }
 

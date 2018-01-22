@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C666246665E005DBE772165E6F29CCF /* SuperAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E012AD31891106DFD6C6A66D39D57EE0 /* SuperAlertController-dummy.m */; };
 		246A5B0E2320CF4969AE8B5A811310AA /* Pods-Sample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 630DD76D417453483F37DBAE838D5518 /* Pods-Sample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29245BD56F403A5E717C53DA0E0597E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7FD0D31DADD3B188857E0AFFFD803CBB /* SuperAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1DC33A5A695F6827E5532CE9CE22407 /* SuperAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F5060EDB6783500BD7BFC2FEF1693CC /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315D08E3AA34AA7A48E94CF9628B87FB /* UIAlertController+Extensions.swift */; };
+		43D7B4A402F451647683A0EC53BA4EFA /* UIAlertController+Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3B303B95FAB398BA387E90DF57DA4 /* UIAlertController+Define.swift */; };
+		4B36B657794770CC8600A80B5952A657 /* UIAlertController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519A94765A0C739D3A555279C45FFC1 /* UIAlertController+Actions.swift */; };
+		5AE5D4E0DFFE5B2F2CFDA362D60CEBDB /* UIAlertController+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC91F1B4E5431C03D1859D086C53763F /* UIAlertController+Init.swift */; };
+		5BF801D6A6F5FEA6BC08EA2A0638E8B4 /* UIAlertAction+KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DC6B71D7B1371674EC99FC9E8A682 /* UIAlertAction+KeyValue.swift */; };
+		7FD0D31DADD3B188857E0AFFFD803CBB /* SuperAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD3216F1C1C1B33C8A0A5063E3B89A7 /* SuperAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95D268681B4DFA27E802C32DBD7CF241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		AB3AFF11EB68608FEB5664CBAE1174DD /* SuperAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9028B41646A77CF48DEF7F83B5FFB75 /* SuperAlertController-dummy.m */; };
+		AB12D6460EA33AB2B7B71E03E6E36BB1 /* UIAlertController+KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81B923EA288AE6C1CE4A31B26D2573 /* UIAlertController+KeyValue.swift */; };
 		DA2ED2C4CDB336DFCDCBCA3BD69A7AB0 /* Pods-Sample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF50723EE695E440CDA214119EF2C70 /* Pods-Sample-dummy.m */; };
-		E87F11273CDEEABA9BAA574B98177371 /* UIAlertController+QuickUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860264024C8E86E4E3A741CF50F9F117 /* UIAlertController+QuickUsage.swift */; };
+		F17846AFCB2B856EB5FF938BE618D5B4 /* UIAlertController+Appear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ED04C0C0988E358C9115675CF215DF /* UIAlertController+Appear.swift */; };
+		F902BDD1E167CDAB2553072AB0FE6EAE /* UIAlertController+Quick.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58F9B3F26E9868F163EC385D755B10 /* UIAlertController+Quick.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,31 +33,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11201CC8141C96C60BB1A22479F5174D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		161FD1626938094EEC6BF57530EDB6DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		217501444F8225FF3AAE49DF4FE25452 /* SuperAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SuperAlertController-prefix.pch"; sourceTree = "<group>"; };
+		1D81B923EA288AE6C1CE4A31B26D2573 /* UIAlertController+KeyValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+KeyValue.swift"; path = "SuperAlertController/UIAlertController+KeyValue.swift"; sourceTree = "<group>"; };
 		2FDF78216A41DB691C5960FEE69EB9FD /* Pods-Sample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sample-resources.sh"; sourceTree = "<group>"; };
-		315D08E3AA34AA7A48E94CF9628B87FB /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Extensions.swift"; path = "SuperAlertController/UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		350D929C54748AF887A4D59793AC048F /* SuperAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SuperAlertController.modulemap; sourceTree = "<group>"; };
+		358F3F787B163DF2BBC92FE1BAA81277 /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
 		3AE375A74D27FC41E7BB6C006DFC76A6 /* Pods-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sample.debug.xcconfig"; sourceTree = "<group>"; };
-		4167E3DD01C36ADBB1E9958DB1F3C704 /* SuperAlertController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SuperAlertController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4A1DC6B71D7B1371674EC99FC9E8A682 /* UIAlertAction+KeyValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertAction+KeyValue.swift"; path = "SuperAlertController/UIAlertAction+KeyValue.swift"; sourceTree = "<group>"; };
 		4AF50723EE695E440CDA214119EF2C70 /* Pods-Sample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sample-dummy.m"; sourceTree = "<group>"; };
+		5BA3B303B95FAB398BA387E90DF57DA4 /* UIAlertController+Define.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Define.swift"; path = "SuperAlertController/UIAlertController+Define.swift"; sourceTree = "<group>"; };
 		630DD76D417453483F37DBAE838D5518 /* Pods-Sample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sample-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6B978B208272F9D717BB0E78AE90523D /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
 		6D65DC53E876D33B73CCFEE44C379EE1 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		735E5204C40E887244F2B75BCCDF2572 /* Pods-Sample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Sample.modulemap"; sourceTree = "<group>"; };
-		860264024C8E86E4E3A741CF50F9F117 /* UIAlertController+QuickUsage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+QuickUsage.swift"; path = "SuperAlertController/UIAlertController+QuickUsage.swift"; sourceTree = "<group>"; };
+		84662CBA696AC2C67CECAF0A4C969A67 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		874DC3B65D7EB3C9EAF2C6663E9B62A7 /* SuperAlertController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SuperAlertController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		91ED04C0C0988E358C9115675CF215DF /* UIAlertController+Appear.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Appear.swift"; path = "SuperAlertController/UIAlertController+Appear.swift"; sourceTree = "<group>"; };
 		92D9EF658E262EEE9537AF94E91B2D31 /* SuperAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SuperAlertController.framework; path = SuperAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C896AB03AD02637A2108FF27D207683 /* Pods-Sample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sample-frameworks.sh"; sourceTree = "<group>"; };
-		9D87CF8E63C972A6C9248BE83B018534 /* SuperAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SuperAlertController.modulemap; sourceTree = "<group>"; };
+		9CD3216F1C1C1B33C8A0A5063E3B89A7 /* SuperAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SuperAlertController-umbrella.h"; sourceTree = "<group>"; };
+		9E45FBE8FC776B1364535F94F2896E8F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A21D9B3C2775E7C503E601A5737980FB /* Pods-Sample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A4F67C9E66E8D9E97F11042B162517EB /* Pods-Sample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sample-acknowledgements.plist"; sourceTree = "<group>"; };
 		A95F7B29D856CB29D0109F39DEC1F9DE /* Pods_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sample.framework; path = "Pods-Sample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B05B267F6042E796DF680B2C34647AD8 /* SuperAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SuperAlertController.xcconfig; sourceTree = "<group>"; };
-		C47F8E8124A994E99E5F42EACC11F49B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9028B41646A77CF48DEF7F83B5FFB75 /* SuperAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SuperAlertController-dummy.m"; sourceTree = "<group>"; };
-		D1DC33A5A695F6827E5532CE9CE22407 /* SuperAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SuperAlertController-umbrella.h"; sourceTree = "<group>"; };
+		AFB285686C920E9CCFF5E6389037F2B6 /* SuperAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SuperAlertController-prefix.pch"; sourceTree = "<group>"; };
+		C03EDF7E8D7CC100A7F881D30719B6CD /* SuperAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SuperAlertController.xcconfig; sourceTree = "<group>"; };
+		CC58F9B3F26E9868F163EC385D755B10 /* UIAlertController+Quick.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Quick.swift"; path = "SuperAlertController/UIAlertController+Quick.swift"; sourceTree = "<group>"; };
+		DC91F1B4E5431C03D1859D086C53763F /* UIAlertController+Init.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Init.swift"; path = "SuperAlertController/UIAlertController+Init.swift"; sourceTree = "<group>"; };
+		E012AD31891106DFD6C6A66D39D57EE0 /* SuperAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SuperAlertController-dummy.m"; sourceTree = "<group>"; };
+		F519A94765A0C739D3A555279C45FFC1 /* UIAlertController+Actions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Actions.swift"; path = "SuperAlertController/UIAlertController+Actions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,27 +94,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29019B2AFEBFD3AB719C478225B8EA64 /* Support Files */ = {
+		1E7BFDB0F5A2601EC6FE20CC0F6F0A3A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				C47F8E8124A994E99E5F42EACC11F49B /* Info.plist */,
-				9D87CF8E63C972A6C9248BE83B018534 /* SuperAlertController.modulemap */,
-				B05B267F6042E796DF680B2C34647AD8 /* SuperAlertController.xcconfig */,
-				C9028B41646A77CF48DEF7F83B5FFB75 /* SuperAlertController-dummy.m */,
-				217501444F8225FF3AAE49DF4FE25452 /* SuperAlertController-prefix.pch */,
-				D1DC33A5A695F6827E5532CE9CE22407 /* SuperAlertController-umbrella.h */,
+				358F3F787B163DF2BBC92FE1BAA81277 /* LICENSE.md */,
+				84662CBA696AC2C67CECAF0A4C969A67 /* README.md */,
+				874DC3B65D7EB3C9EAF2C6663E9B62A7 /* SuperAlertController.podspec */,
 			);
-			name = "Support Files";
-			path = "Sample/Pods/Target Support Files/SuperAlertController";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		68FA6AF77B3B4BAF611BB9EFE3552AE8 /* SuperAlertController */ = {
+		46CC5EBEB87379F2B99FBBD02E666153 /* SuperAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				315D08E3AA34AA7A48E94CF9628B87FB /* UIAlertController+Extensions.swift */,
-				860264024C8E86E4E3A741CF50F9F117 /* UIAlertController+QuickUsage.swift */,
-				A91E44D8CE2D9EF7DD59A352CB1DF72E /* Pod */,
-				29019B2AFEBFD3AB719C478225B8EA64 /* Support Files */,
+				4A1DC6B71D7B1371674EC99FC9E8A682 /* UIAlertAction+KeyValue.swift */,
+				F519A94765A0C739D3A555279C45FFC1 /* UIAlertController+Actions.swift */,
+				91ED04C0C0988E358C9115675CF215DF /* UIAlertController+Appear.swift */,
+				5BA3B303B95FAB398BA387E90DF57DA4 /* UIAlertController+Define.swift */,
+				DC91F1B4E5431C03D1859D086C53763F /* UIAlertController+Init.swift */,
+				1D81B923EA288AE6C1CE4A31B26D2573 /* UIAlertController+KeyValue.swift */,
+				CC58F9B3F26E9868F163EC385D755B10 /* UIAlertController+Quick.swift */,
+				1E7BFDB0F5A2601EC6FE20CC0F6F0A3A /* Pod */,
+				D22C02E959CD46C38901C3C1B84ADDC5 /* Support Files */,
 			);
 			name = SuperAlertController;
 			path = ../..;
@@ -114,11 +125,19 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				CD8056002CEBF00C4B844BCDC220F909 /* Development Pods */,
+				9A27D01BF83255F14E707ECCF0967E7A /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				1DE55C5336193BE2DA501CB83AE2CD0C /* Products */,
 				A8614ADDDA2C845A05B4D5D16AB12C48 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9A27D01BF83255F14E707ECCF0967E7A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46CC5EBEB87379F2B99FBBD02E666153 /* SuperAlertController */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		A8614ADDDA2C845A05B4D5D16AB12C48 /* Targets Support Files */ = {
@@ -127,16 +146,6 @@
 				BF5639CAB18577B4EDAE07E0E34E188C /* Pods-Sample */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		A91E44D8CE2D9EF7DD59A352CB1DF72E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				6B978B208272F9D717BB0E78AE90523D /* LICENSE.md */,
-				11201CC8141C96C60BB1A22479F5174D /* README.md */,
-				4167E3DD01C36ADBB1E9958DB1F3C704 /* SuperAlertController.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -165,12 +174,18 @@
 			path = "Target Support Files/Pods-Sample";
 			sourceTree = "<group>";
 		};
-		CD8056002CEBF00C4B844BCDC220F909 /* Development Pods */ = {
+		D22C02E959CD46C38901C3C1B84ADDC5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				68FA6AF77B3B4BAF611BB9EFE3552AE8 /* SuperAlertController */,
+				9E45FBE8FC776B1364535F94F2896E8F /* Info.plist */,
+				350D929C54748AF887A4D59793AC048F /* SuperAlertController.modulemap */,
+				C03EDF7E8D7CC100A7F881D30719B6CD /* SuperAlertController.xcconfig */,
+				E012AD31891106DFD6C6A66D39D57EE0 /* SuperAlertController-dummy.m */,
+				AFB285686C920E9CCFF5E6389037F2B6 /* SuperAlertController-prefix.pch */,
+				9CD3216F1C1C1B33C8A0A5063E3B89A7 /* SuperAlertController-umbrella.h */,
 			);
-			name = "Development Pods";
+			name = "Support Files";
+			path = "Sample/Pods/Target Support Files/SuperAlertController";
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -207,7 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D8A67F8F858A023CB76F12FD7E78574 /* Build configuration list for PBXNativeTarget "SuperAlertController" */;
 			buildPhases = (
-				B33B15FB8150F9C3877A76FDB3209A87 /* Sources */,
+				3103EA6948C2BE7E197AF11F5070B5C6 /* Sources */,
 				CD9D7D49503A5F98D66B5EE1D75AA6D3 /* Frameworks */,
 				E830F4B3D32DB0C511AB56F0558D6382 /* Headers */,
 			);
@@ -274,13 +289,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B33B15FB8150F9C3877A76FDB3209A87 /* Sources */ = {
+		3103EA6948C2BE7E197AF11F5070B5C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3AFF11EB68608FEB5664CBAE1174DD /* SuperAlertController-dummy.m in Sources */,
-				8F5060EDB6783500BD7BFC2FEF1693CC /* UIAlertController+Extensions.swift in Sources */,
-				E87F11273CDEEABA9BAA574B98177371 /* UIAlertController+QuickUsage.swift in Sources */,
+				0C666246665E005DBE772165E6F29CCF /* SuperAlertController-dummy.m in Sources */,
+				5BF801D6A6F5FEA6BC08EA2A0638E8B4 /* UIAlertAction+KeyValue.swift in Sources */,
+				4B36B657794770CC8600A80B5952A657 /* UIAlertController+Actions.swift in Sources */,
+				F17846AFCB2B856EB5FF938BE618D5B4 /* UIAlertController+Appear.swift in Sources */,
+				43D7B4A402F451647683A0EC53BA4EFA /* UIAlertController+Define.swift in Sources */,
+				5AE5D4E0DFFE5B2F2CFDA362D60CEBDB /* UIAlertController+Init.swift in Sources */,
+				AB12D6460EA33AB2B7B71E03E6E36BB1 /* UIAlertController+KeyValue.swift in Sources */,
+				F902BDD1E167CDAB2553072AB0FE6EAE /* UIAlertController+Quick.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +501,7 @@
 		};
 		C8F0B9AFA47E0001E879AD67F029D7D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B05B267F6042E796DF680B2C34647AD8 /* SuperAlertController.xcconfig */;
+			baseConfigurationReference = C03EDF7E8D7CC100A7F881D30719B6CD /* SuperAlertController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -512,7 +532,7 @@
 		};
 		C98CF5AD0A6DAAFED01DDE7C726D8CB5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B05B267F6042E796DF680B2C34647AD8 /* SuperAlertController.xcconfig */;
+			baseConfigurationReference = C03EDF7E8D7CC100A7F881D30719B6CD /* SuperAlertController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
