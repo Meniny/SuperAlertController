@@ -1,5 +1,5 @@
 PODS:
-  - SuperAlertController (1.1.0)
+  - SuperAlertController (1.1.1)
 
 DEPENDENCIES:
   - SuperAlertController (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SuperAlertController: 6378f5b231dfb6addba6846f1c25568db46273c6
+  SuperAlertController: aa2f3b207a6542dd3be761e8532ac1e50ce1e965
 
 PODFILE CHECKSUM: f84da238c075013b919d2c05bee492672c5de031
 

@@ -77,7 +77,8 @@ public extension UIAlertController {
     ///   - vibrate: set true to vibrate the device while presenting the alert (default is false).
     ///   - serial: ‼️ sequential shown, if true, please call `hide(completion:)` or `continueSerial(completion:)` to dismiss this `UIAlertController`
     ///   - completion: an optional completion handler to be called after presenting alert controller (default is nil).
-    public func show(animated: Bool = true,
+    public func show(to controller: UIViewController? = nil,
+                     animated: Bool = true,
                      vibrate: Bool = false,
                      serial: Bool = false,
                      completion: (() -> Void)? = nil) {
@@ -85,18 +86,18 @@ public extension UIAlertController {
             UIAlertControllerSequentialQueue.async {
                 UIAlertControllerSemaphore.wait()
                 DispatchQueue.main.async {
-                    self.private_show(animated: animated, vibrate: vibrate, completion: completion)
+                    self.private_show(animated: animated, to: controller, vibrate: vibrate, completion: completion)
                 }
             }
         } else {
             DispatchQueue.main.async {
-                self.private_show(animated: animated, vibrate: vibrate, completion: completion)
+                self.private_show(animated: animated, to: controller, vibrate: vibrate, completion: completion)
             }
         }
     }
     
     private func private_show(animated: Bool,
-                              to controller: UIViewController? = nil,
+                              to controller: UIViewController?,
                               vibrate: Bool,
                               completion: (() -> Void)?) {
         (controller ?? UIApplication.shared.keyWindow?.rootViewController)?.present(self, animated: animated, completion: completion)
