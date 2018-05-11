@@ -3,7 +3,7 @@
 :author_esc: Elias%20Abel
 :mail: admin@meniny.cn
 :desc: an UIAlertController extension.
-:version: 2.0.0
+:version: 2.0.1
 :na: N/A
 :ios: 9.0
 :macos: {na}

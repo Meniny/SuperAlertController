@@ -1,6 +1,6 @@
 PODS:
-  - SuperAlertController/Core (2.0.0)
-  - SuperAlertController/Ext (2.0.0):
+  - SuperAlertController/Core (2.0.1)
+  - SuperAlertController/Ext (2.0.1):
     - SuperAlertController/Core
 
 DEPENDENCIES:
@@ -11,8 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SuperAlertController: fe4ca5950453e5d30d147a92f706723b4b39c675
+  SuperAlertController: 65aa2beac21da9b9bd5e55d918b8ce3acaedf22e
 
-PODFILE CHECKSUM: 1dd5c03fe477a200bab6604a2f8d531153233dbf
+PODFILE CHECKSUM: 6a61221ce7ef5230850f685e1eac408a76b32c99
 
 COCOAPODS: 1.5.0

@@ -1,6 +1,6 @@
 import Foundation
 
-extension Locale {
+internal extension Locale {
     
     static func locale(forCountry countryName: String) -> String? {
         return Locale.isoRegionCodes.filter { self.countryName(fromLocaleCode: $0) == countryName }.first
