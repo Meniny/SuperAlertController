@@ -68,7 +68,7 @@ internal extension Array where Element: Equatable {
 	///
 	/// - Parameter elements: array of elements to check.
 	/// - Returns: true if array contains all given items.
-	public func contains(_ elements: [Element]) -> Bool {
+	internal func contains(_ elements: [Element]) -> Bool {
 		guard !elements.isEmpty else { // elements array is empty
 			return false
 		}
@@ -85,7 +85,7 @@ internal extension Array where Element: Equatable {
 	///
 	/// - Parameter item: item to check.
 	/// - Returns: an array with all indexes of the given item.
-	public func indexes(of item: Element) -> [Int] {
+	internal func indexes(of item: Element) -> [Int] {
 		var indexes: [Int] = []
 		for index in 0..<self.count {
 			if self[index] == item {

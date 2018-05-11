@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-extension UIColor {
+internal extension UIColor {
     
     /// SwifterSwift: https://github.com/SwifterSwift/SwifterSwift
     /// Hexadecimal value string (read-only).
@@ -90,7 +90,7 @@ extension UIColor {
 }
 
 // MARK: - Initializers
-public extension UIColor {
+internal extension UIColor {
     
     internal convenience init(hex: Int, alpha: CGFloat) {
         let r = CGFloat((hex & 0xFF0000) >> 16)/255
