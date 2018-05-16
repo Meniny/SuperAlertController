@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author           = 'Elias Abel'
   s.source           = { :git => "https://github.com/Meniny/SuperAlertController.git", :tag => s.version.to_s }
   s.social_media_url = 'https://meniny.cn/'
-  s.source_files     = "SuperAlertController/**/*.swift"
+  # s.source_files     = "SuperAlertController/**/*.swift"
   s.requires_arc     = true
   s.description      = "SuperAlertController is an UIAlertController extension."
   s.module_name      = 'SuperAlertController'
