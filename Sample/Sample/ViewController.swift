@@ -291,7 +291,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.addActions(for: type, to: alertController)
         
-        alertController.show(animated: true, vibrate: true, serial: true, completion: nil)
+        alertController.show(animated: true, vibrate: true, completion: nil)
     }
     
     func addActions(for type: SuperAlertType, to alertController: SuperAlertController) {

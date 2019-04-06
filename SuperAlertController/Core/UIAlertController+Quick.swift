@@ -89,8 +89,8 @@ public extension UIViewController {
     ///   - completion: Completion closure
     /// - Returns: The controller
     @discardableResult
-    func present(alertContrller: SuperAlertController, animated: Bool = true, completion: (() -> Void)? = nil) -> UIAlertController {
-        alertContrller.show(animated: animated, vibrate: false, serial: true, completion: completion)
+    func present(alertContrller: SuperAlertController, animated: Bool = true, serial: Bool = false, completion: (() -> Void)? = nil) -> UIAlertController {
+        alertContrller.show(animated: animated, vibrate: false, serial: serial, completion: completion)
         return alertContrller
     }
     
