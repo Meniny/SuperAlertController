@@ -15,7 +15,7 @@ extension UIAlertController {
     ///   - height: height of picker's view controller
     ///   - images: for content to select
     ///   - selection: type and action for selection of image/images
-    public func addImagePicker(_ scroll: UICollectionViewScrollDirection, paging: Bool, height: CGFloat? = nil, images: [UIImage], selection: ImagePickerViewController.SelectionType? = nil) {
+    public func addImagePicker(_ scroll: UICollectionView.ScrollDirection, paging: Bool, height: CGFloat? = nil, images: [UIImage], selection: ImagePickerViewController.SelectionType? = nil) {
         let imagePicker = ImagePickerViewController(flow: scroll, paging: paging, data: images, selection: selection)
         if let height = height {
             imagePicker.preferredContentSize.height = height
@@ -52,14 +52,14 @@ final public class ImagePickerViewController: UIViewController {
     var preferredHeight: CGFloat {
         switch layout.scrollDirection {
         case .vertical: return UIScreen.main.bounds.height
-        case .horizontal: return UIScreen.main.bounds.width * 1.5
+        default: return UIScreen.main.bounds.width * 1.5
         }
     }
     
     var columns: CGFloat {
         switch layout.scrollDirection {
         case .vertical: return 2
-        case .horizontal: return 1
+        default: return 1
         }
     }
     
@@ -67,7 +67,7 @@ final public class ImagePickerViewController: UIViewController {
         switch layout.scrollDirection {
         case .vertical:
             return CGSize(width: collectionView.bounds.width / columns, height: collectionView.bounds.width / columns)
-        case .horizontal:
+        default:
             return collectionView.bounds.size
         }
     }
@@ -80,7 +80,7 @@ final public class ImagePickerViewController: UIViewController {
         $0.register(ItemWithImage.self, forCellWithReuseIdentifier: String(describing: ItemWithImage.self))
         $0.showsVerticalScrollIndicator = false
         $0.showsHorizontalScrollIndicator = false
-        $0.decelerationRate = UIScrollViewDecelerationRateFast
+        $0.decelerationRate = UIScrollView.DecelerationRate.fast
         if #available(iOS 11.0, *) {
             $0.contentInsetAdjustmentBehavior = .never
         }
@@ -98,7 +98,7 @@ final public class ImagePickerViewController: UIViewController {
     fileprivate lazy var indicatorView: UIActivityIndicatorView = {
         $0.color = .lightGray
         return $0
-    }(UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge))
+    }(UIActivityIndicatorView(style: .whiteLarge))
     
     fileprivate var data: [UIImage]
     fileprivate var selection: SelectionType?
@@ -108,7 +108,7 @@ final public class ImagePickerViewController: UIViewController {
     
     // MARK: Initialize
     
-    public required init(flow: UICollectionViewScrollDirection, paging: Bool, data: [UIImage], selection: SelectionType?) {
+    public required init(flow: UICollectionView.ScrollDirection, paging: Bool, data: [UIImage], selection: SelectionType?) {
         self.data = data
         self.selection = selection
         super.init(nibName: nil, bundle: nil)
@@ -241,7 +241,7 @@ extension ImagePickerViewController: UICollectionViewDelegateFlowLayout {
         switch layout.scrollDirection {
         case .vertical:
             return CGSize(width: collectionView.bounds.width / columns, height: collectionView.bounds.width / columns)
-        case .horizontal:
+        default:
             return collectionView.bounds.size
         }
     }

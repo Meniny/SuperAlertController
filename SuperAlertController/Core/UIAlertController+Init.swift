@@ -75,7 +75,7 @@ public extension UIAlertController {
     ///   - message: alert controller's message (default is nil).
     ///   - defaultActionButtonTitle: default action button title (default is "OK")
     ///   - tintColor: alert controller's tint color (default is nil)
-    public convenience init(style: UIAlertControllerStyle,
+    convenience init(style: UIAlertController.Style,
                             source: UIView? = nil,
                             title: String? = nil,
                             message: String? = nil,

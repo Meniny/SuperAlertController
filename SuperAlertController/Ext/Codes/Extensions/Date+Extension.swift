@@ -63,7 +63,7 @@ internal extension Date {
     }
     
     /// Hour.
-    internal var hour: Int {
+    var hour: Int {
         get {
             return calendar.component(.hour, from: self)
         }
@@ -73,7 +73,7 @@ internal extension Date {
     }
     
     /// Minutes.
-    internal var minute: Int {
+    var minute: Int {
         get {
             return calendar.component(.minute, from: self)
         }
@@ -83,7 +83,7 @@ internal extension Date {
     }
     
     /// Seconds.
-    internal var second: Int {
+    var second: Int {
         get {
             return calendar.component(.second, from: self)
         }
@@ -93,27 +93,27 @@ internal extension Date {
     }
     
     /// Nanoseconds.
-    internal var nanosecond: Int {
+    var nanosecond: Int {
         return calendar.component(.nanosecond, from: self)
     }
     
     /// Check if date is in future.
-    internal var isInFuture: Bool {
+    var isInFuture: Bool {
         return self > Date()
     }
     
     /// Check if date is in past.
-    internal var isInPast: Bool {
+    var isInPast: Bool {
         return self < Date()
     }
     
     /// Check if date is in today.
-    internal var isInToday: Bool {
+    var isInToday: Bool {
         return self.day == Date().day && self.month == Date().month && self.year == Date().year
     }
     
     /// ISO8601 string of format (yyyy-MM-dd'T'HH:mm:ss.SSS) from date.
-    internal var iso8601String: String {
+    var iso8601String: String {
         // https://github.com/justinmakaila/NSDate-ISO-8601/blob/master/NSDateISO8601.swift
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -124,7 +124,7 @@ internal extension Date {
     }
     
     /// Nearest five minutes to date.
-    internal var nearestFiveMinutes: Date {
+    var nearestFiveMinutes: Date {
         var components = Calendar.current.dateComponents([.year, .month , .day , .hour , .minute], from: self)
         guard let min = components.minute else {
             return self
@@ -138,7 +138,7 @@ internal extension Date {
     }
     
     /// Nearest ten minutes to date.
-    internal var nearestTenMinutes: Date {
+    var nearestTenMinutes: Date {
         var components = Calendar.current.dateComponents([.year, .month , .day , .hour , .minute], from: self)
         guard let min = components.minute else {
             return self
@@ -152,7 +152,7 @@ internal extension Date {
     }
     
     /// Nearest quarter to date.
-    internal var nearestHourQuarter: Date {
+    var nearestHourQuarter: Date {
         var components = Calendar.current.dateComponents([.year, .month , .day , .hour , .minute], from: self)
         guard let min = components.minute else {
             return self
@@ -166,7 +166,7 @@ internal extension Date {
     }
     
     /// Nearest half hour to date.
-    internal var nearestHalfHour: Date {
+    var nearestHalfHour: Date {
         var components = Calendar.current.dateComponents([.year, .month , .day , .hour , .minute], from: self)
         guard let min = components.minute else {
             return self
@@ -180,12 +180,12 @@ internal extension Date {
     }
     
     /// Time zone used by system.
-    internal var timeZone: TimeZone {
+    var timeZone: TimeZone {
         return self.calendar.timeZone
     }
     
     /// UNIX timestamp from date.
-    internal var unixTimestamp: Double {
+    var unixTimestamp: Double {
         return timeIntervalSince1970
     }
     
@@ -200,7 +200,7 @@ internal extension Date {
     /// - Parameters:
     ///   - component: component type.
     ///   - value: multiples of compnenet to add.
-    internal mutating func add(_ component: Calendar.Component, value: Int) {
+    mutating func add(_ component: Calendar.Component, value: Int) {
         switch component {
         case .second:
             self = calendar.date(byAdding: .second, value: value, to: self) ?? self
@@ -241,7 +241,7 @@ internal extension Date {
     ///   - component: component type.
     ///   - value: multiples of compnenets to add.
     /// - Returns: original date + multiples of compnenet added.
-    internal func adding(_ component: Calendar.Component, value: Int) -> Date {
+    func adding(_ component: Calendar.Component, value: Int) -> Date {
         switch component {
         case .second:
             return calendar.date(byAdding: .second, value: value, to: self) ?? self
@@ -275,7 +275,7 @@ internal extension Date {
     ///   - component: component type.
     ///   - value: new value of compnenet to change.
     /// - Returns: original date + multiples of compnenets added.
-    internal func changing(_ component: Calendar.Component, value: Int) -> Date {
+    func changing(_ component: Calendar.Component, value: Int) -> Date {
         switch component {
         case .second:
             var date = self
@@ -316,7 +316,7 @@ internal extension Date {
     ///
     /// - Parameter component: calendar component to get date at the beginning of.
     /// - Returns: date at the beginning of calendar component (if applicable).
-    internal func beginning(of component: Calendar.Component) -> Date? {
+    func beginning(of component: Calendar.Component) -> Date? {
         switch component {
         case .second:
             return calendar.date(from: calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: self))
@@ -348,7 +348,7 @@ internal extension Date {
     ///
     /// - Parameter component: calendar component to get date at the end of.
     /// - Returns: date at the end of calendar component (if applicable).
-    internal func end(of component: Calendar.Component) -> Date? {
+    func end(of component: Calendar.Component) -> Date? {
         switch component {
         case .second:
             var date = self.adding(.second, value: 1)
@@ -425,7 +425,7 @@ internal extension Date {
     ///
     /// - Parameter style: DateFormatter style (default is .medium)
     /// - Returns: date and time string
-    internal func dateTimeString(ofStyle style: DateFormatter.Style = .medium) -> String {
+    func dateTimeString(ofStyle style: DateFormatter.Style = .medium) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = style
         dateFormatter.dateStyle = style
@@ -436,7 +436,7 @@ internal extension Date {
     ///
     /// - Parameter component: calendar componenet to check.
     /// - Returns: true if date is in current given calendar component.
-    internal func isInCurrent(_ component: Calendar.Component) -> Bool {
+    func isInCurrent(_ component: Calendar.Component) -> Bool {
         switch component {
         case .second:
             return second == Date().second && minute == Date().minute && hour == Date().hour && day == Date().day
@@ -473,7 +473,7 @@ internal extension Date {
     }
     
     /// Time string from date
-    internal func timeString(ofStyle style: DateFormatter.Style = .medium) -> String {
+    func timeString(ofStyle style: DateFormatter.Style = .medium) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = style
         dateFormatter.dateStyle = .none
@@ -499,7 +499,7 @@ internal extension Date {
     ///   - minute: Minute (default is current minute).
     ///   - second: Second (default is current second).
     ///   - nanosecond: Nanosecond (default is current nanosecond).
-    internal init(
+    init(
         calendar: Calendar? = Calendar.current,
         timeZone: TimeZone? = TimeZone.current,
         era: Int? = Date().era,
@@ -529,7 +529,7 @@ internal extension Date {
     /// Create date object from ISO8601 string.
     ///
     /// - Parameter iso8601String: ISO8601 string of format (yyyy-MM-dd'T'HH:mm:ss.SSSZ).
-    internal init(iso8601String: String) {
+    init(iso8601String: String) {
         // https://github.com/justinmakaila/NSDate-ISO-8601/blob/master/NSDateISO8601.swift
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -541,7 +541,7 @@ internal extension Date {
     /// Create new date object from UNIX timestamp.
     ///
     /// - Parameter unixTimestamp: UNIX timestamp.
-    internal init(unixTimestamp: Double) {
+    init(unixTimestamp: Double) {
         self.init(timeIntervalSince1970: unixTimestamp)
     }
     
@@ -549,7 +549,7 @@ internal extension Date {
 
 internal extension Date {
     /// SwiftRandom extension
-    internal static func randomWithinDaysBeforeToday(_ days: Int) -> Date {
+    static func randomWithinDaysBeforeToday(_ days: Int) -> Date {
         let today = Date()
         let gregorian = Calendar(identifier: Calendar.Identifier.gregorian)
         
@@ -572,7 +572,7 @@ internal extension Date {
     }
     
     /// SwiftRandom extension
-    internal static func random() -> Date {
+    static func random() -> Date {
         let randomTime = TimeInterval(arc4random_uniform(UInt32.max))
         return Date(timeIntervalSince1970: randomTime)
     }

@@ -98,7 +98,7 @@ public final class LocalePickerViewController: UIViewController {
     fileprivate lazy var indicatorView: UIActivityIndicatorView = {
         $0.color = .lightGray
         return $0
-    }(UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge))
+    }(UIActivityIndicatorView(style: .whiteLarge))
     
     fileprivate var type: Kind
     fileprivate var action: LocalePickerAction?
@@ -288,7 +288,7 @@ final class CountryTableViewCell: UITableViewCell {
 
     // MARK: Initialize
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = nil
@@ -318,7 +318,7 @@ final class PhoneCodeTableViewCell: UITableViewCell {
     
     // MARK: Initialize
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = nil
@@ -353,7 +353,7 @@ final class CurrencyTableViewCell: UITableViewCell {
     
     // MARK: Initialize
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = nil

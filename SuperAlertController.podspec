@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SuperAlertController'
-  s.version          = "2.0.2"
+  s.version          = "2.1.0"
   s.summary          = "An UIAlertController extension."
   s.homepage         = "https://github.com/Meniny/SuperAlertController"
   s.license          = { :type => "MIT", :file => "LICENSE.md" }
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.module_name      = 'SuperAlertController'
 
   s.ios.deployment_target = "9.0"
-  s.pod_target_xcconfig   = { 'SWIFT_VERSION' => '4.1' }
-  s.swift_version         = "4.1"
+  s.pod_target_xcconfig   = { 'SWIFT_VERSION' => '5' }
+  s.swift_version         = "5"
 
   s.default_subspecs      = 'Core'
 

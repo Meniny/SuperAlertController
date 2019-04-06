@@ -10,7 +10,7 @@ import UIKit
 import SuperAlertController
 
 public enum SuperAlertType {
-    case imagePicker(direction: UICollectionViewScrollDirection)
+    case imagePicker(direction: UICollectionView.ScrollDirection)
     case datePicker
     case phoneCodePicker
     case localePicker
@@ -120,7 +120,7 @@ let azure = #colorLiteral(red: 0.05, green:0.49, blue:0.98, alpha:1.00)
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
-    var alertStyle: UIAlertControllerStyle = .alert
+    var alertStyle: UIAlertController.Style = .alert
     
     @IBOutlet weak var segment: UISegmentedControl!
     

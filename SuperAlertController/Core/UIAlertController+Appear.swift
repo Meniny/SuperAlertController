@@ -77,7 +77,7 @@ public extension UIAlertController {
     ///   - vibrate: set true to vibrate the device while presenting the alert (default is false).
     ///   - serial: ‼️ sequential shown, if true, please call `hide(completion:)` or `continueSerial(completion:)` to dismiss this `UIAlertController`
     ///   - completion: an optional completion handler to be called after presenting alert controller (default is nil).
-    public func show(to controller: UIViewController? = nil,
+    func show(to controller: UIViewController? = nil,
                      animated: Bool = true,
                      vibrate: Bool = false,
                      serial: Bool = false,
@@ -110,7 +110,7 @@ public extension UIAlertController {
     ///
     /// - Parameters:
     ///   - completion: Completion action
-    public func hide(completion: (() -> Void)?) {
+    func hide(completion: (() -> Void)?) {
         self.contentViewController = nil
         self.dismiss(animated: true, completion: {
             completion?()
@@ -121,7 +121,7 @@ public extension UIAlertController {
     /// Quit the serial
     ///
     /// - Parameter completion: Completion action
-    public func continueSerial(completion: (() -> Void)?) {
+    func continueSerial(completion: (() -> Void)?) {
         completion?()
         UIAlertControllerSemaphore.signal()
     }

@@ -12,7 +12,7 @@ extension UITextField {
     
     internal func left(image: UIImage?, color: UIColor = .black) {
         if let image = image {
-            leftViewMode = UITextFieldViewMode.always
+            leftViewMode = UITextField.ViewMode.always
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
             imageView.contentMode = .scaleAspectFit
             imageView.image = image
@@ -20,7 +20,7 @@ extension UITextField {
             imageView.tintColor = color
             leftView = imageView
         } else {
-            leftViewMode = UITextFieldViewMode.never
+            leftViewMode = UITextField.ViewMode.never
             leftView = nil
         }
     }
@@ -31,7 +31,7 @@ extension UITextField {
     
     internal func right(image: UIImage?, color: UIColor = .black) {
         if let image = image {
-            rightViewMode = UITextFieldViewMode.always
+            rightViewMode = UITextField.ViewMode.always
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
             imageView.contentMode = .scaleAspectFit
             imageView.image = image
@@ -39,7 +39,7 @@ extension UITextField {
             imageView.tintColor = color
             rightView = imageView
         } else {
-            rightViewMode = UITextFieldViewMode.never
+            rightViewMode = UITextField.ViewMode.never
             rightView = nil
         }
     }
@@ -69,12 +69,12 @@ internal extension UITextField {
     /// Set placeholder text color.
     ///
     /// - Parameter color: placeholder text color.
-    internal func setPlaceHolderTextColor(_ color: UIColor) {
-        self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: color])
+    func setPlaceHolderTextColor(_ color: UIColor) {
+        self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: color])
     }
     
     /// Set placeholder text and its color
-    internal func placeholder(text value: String, color: UIColor = .red) {
-        self.attributedPlaceholder = NSAttributedString(string: value, attributes: [ NSAttributedStringKey.foregroundColor : color])
+    func placeholder(text value: String, color: UIColor = .red) {
+        self.attributedPlaceholder = NSAttributedString(string: value, attributes: [ NSAttributedString.Key.foregroundColor : color])
     }
 }

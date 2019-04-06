@@ -8,7 +8,7 @@ extension UIAlertController {
     }
     
     /// Add an Activity Indicator
-    public func addActivityIndicator(style: UIActivityIndicatorViewStyle = .whiteLarge, color: UIColor? = nil) {
+    public func addActivityIndicator(style: UIActivityIndicatorView.Style = .whiteLarge, color: UIColor? = nil) {
         let controller = ActivityIndicatorController.init(style: style, color: color)
         self.setContentViewController(controller)
     }
@@ -16,16 +16,16 @@ extension UIAlertController {
 
 public final class ActivityIndicatorController: UIViewController {
     lazy public private(set) var activityIndicator: UIActivityIndicatorView = {
-        let v = UIActivityIndicatorView.init(activityIndicatorStyle: style)
+        let v = UIActivityIndicatorView.init(style: style)
         v.color = color
         v.hidesWhenStopped = false
         return v
     }()
     
-    public private(set) var style: UIActivityIndicatorViewStyle
+    public private(set) var style: UIActivityIndicatorView.Style
     public private(set) var color: UIColor?
     
-    public required init(style: UIActivityIndicatorViewStyle, color: UIColor?) {
+    public required init(style: UIActivityIndicatorView.Style, color: UIColor?) {
         self.style = style
         self.color = color
         super.init(nibName: nil, bundle: nil)
@@ -37,7 +37,7 @@ public final class ActivityIndicatorController: UIViewController {
     
     public override func loadView() {
         view = self.activityIndicator
-        view.addConstraint(NSLayoutConstraint.init(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 150))
+        view.addConstraint(NSLayoutConstraint.init(item: view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 150))
     }
     
     public override func viewDidLoad() {

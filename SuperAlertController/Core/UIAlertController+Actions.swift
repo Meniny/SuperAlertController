@@ -72,7 +72,7 @@ public extension UIAlertController {
     ///   - style: action style (default is UIAlertActionStyle.default)
     ///   - isEnabled: isEnabled status for action (default is true)
     ///   - handler: optional action handler to be called when button is tapped (default is nil)
-    public func addAction(image: UIImage? = nil, title: String, color: UIColor? = nil, style: UIAlertActionStyle = .default, isEnabled: Bool = true, handler: ((UIAlertAction) -> Void)? = nil) {
+    func addAction(image: UIImage? = nil, title: String, color: UIColor? = nil, style: UIAlertAction.Style = .default, isEnabled: Bool = true, handler: ((UIAlertAction) -> Void)? = nil) {
         
         let closure: ((UIAlertAction) -> Void) = handler ?? { [weak self] _ in
             self?.hide(completion: nil)

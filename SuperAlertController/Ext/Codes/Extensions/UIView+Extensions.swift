@@ -3,14 +3,14 @@ import Foundation
 
 internal extension UIView {
     @discardableResult
-    internal func set(attribute: NSLayoutAttribute, _ relation: NSLayoutRelation, to toAttribute:  NSLayoutAttribute, of item: UIView?, offset: CGFloat = 0) -> NSLayoutConstraint {
+    func set(attribute: NSLayoutConstraint.Attribute, _ relation: NSLayoutConstraint.Relation, to toAttribute:  NSLayoutConstraint.Attribute, of item: UIView?, offset: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint.init(item: self, attribute: attribute, relatedBy: relation, toItem: item, attribute: toAttribute, multiplier: 1, constant: offset)
         self.superview?.addConstraint(constraint)
         return constraint
     }
     
     @discardableResult
-    internal func follow(edge: UIEdgeInsets) -> [NSLayoutConstraint] {
+    func follow(edge: UIEdgeInsets) -> [NSLayoutConstraint] {
         return [
             self.set(attribute: .top, .equal, to: .top, of: self.superview, offset: edge.top),
             self.set(attribute: .left, .equal, to: .left, of: self.superview, offset: edge.left),
@@ -221,9 +221,9 @@ extension UIView {
 
 public extension UIView {
     
-    public typealias Configuration = (UIView) -> Swift.Void
+    typealias Configuration = (UIView) -> Swift.Void
     
-    public func config(configurate: Configuration?) {
+    func config(configurate: Configuration?) {
         configurate?(self)
     }
     

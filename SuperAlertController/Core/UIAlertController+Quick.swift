@@ -65,7 +65,7 @@ import Foundation
 import UIKit
 
 fileprivate extension String {
-    fileprivate var localized: String {
+    var localized: String {
         return NSLocalizedString(self, comment: "")
     }
 }
@@ -73,11 +73,11 @@ fileprivate extension String {
 public typealias SuperAlertActionClosure = (_ index: Int, _ action: UIAlertAction, _ controller: SuperAlertController) -> Swift.Void
 public typealias SuperAlertConfigurationClosure = (_ controller: inout SuperAlertController) -> Swift.Void
 public typealias SuperAlertTextFieldInfo = (title: String?, placeholder: String?)
-public typealias SuperAlertControllerStyle = UIAlertControllerStyle
+public typealias SuperAlertControllerStyle = UIAlertController.Style
 
 public extension UIViewController {
     
-    public struct AlertControllerDefaults {
+    struct AlertControllerDefaults {
         public static var cancelActionTitle = "Cancel"
     }
     
@@ -89,13 +89,13 @@ public extension UIViewController {
     ///   - completion: Completion closure
     /// - Returns: The controller
     @discardableResult
-    public func present(alertContrller: SuperAlertController, animated: Bool = true, completion: (() -> Void)? = nil) -> UIAlertController {
+    func present(alertContrller: SuperAlertController, animated: Bool = true, completion: (() -> Void)? = nil) -> UIAlertController {
         alertContrller.show(animated: animated, vibrate: false, serial: true, completion: completion)
         return alertContrller
     }
     
     @discardableResult
-    public func dismiss(alertContrller: SuperAlertController, animated: Bool = true, completion: (() -> Void)? = nil) -> UIAlertController {
+    func dismiss(alertContrller: SuperAlertController, animated: Bool = true, completion: (() -> Void)? = nil) -> UIAlertController {
         alertContrller.hide(completion: completion)
         return alertContrller
     }
@@ -114,7 +114,7 @@ public extension UIViewController {
     ///   - config: Configuration
     ///   - action: Action closure
     @discardableResult
-    public func show(_ style: UIAlertControllerStyle,
+    func show(_ style: UIAlertController.Style,
                      title alertTitle: String?,
                      message: String?,
                      alignment: NSTextAlignment = .center,
@@ -147,9 +147,9 @@ public extension UIViewController {
             let messageText = NSAttributedString.init(
                 string: msg.localized,
                 attributes: [
-                    NSAttributedStringKey.paragraphStyle: paragraphStyle,
-                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12),
-                    NSAttributedStringKey.foregroundColor : UIColor.darkText
+                    NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
+                    NSAttributedString.Key.foregroundColor : UIColor.darkText
                 ]
             )
             alertController.setValue(messageText, forKey: "attributedMessage")
@@ -170,7 +170,7 @@ public extension UIViewController {
         }
         
         for btn in buttons {
-            guard let index = buttons.index(of: btn) else {
+            guard let index = buttons.firstIndex(of: btn) else {
                 continue
             }
             let button = UIAlertAction.init(title: btn.localized,
@@ -202,7 +202,7 @@ public extension UIViewController {
     ///   - buttons: An array of dismiss button title strings
     ///   - config: Configuration
     ///   - action: Action closure
-    public func debug(_ style: UIAlertControllerStyle,
+    func debug(_ style: UIAlertController.Style,
                       title alertTitle: String?,
                       message: String?,
                       alignment: NSTextAlignment = .center,

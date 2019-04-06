@@ -65,7 +65,7 @@ import Foundation
 import UIKit
 
 public extension UIAlertAction {
-    public var image: UIImage? {
+    var image: UIImage? {
         get {
             return value(forKey: "image") as? UIImage
         }
@@ -74,7 +74,7 @@ public extension UIAlertAction {
         }
     }
     
-    public var titleTextColor: UIColor? {
+    var titleTextColor: UIColor? {
         get {
             return value(forKey: "titleTextColor") as? UIColor
         }

@@ -3,15 +3,15 @@
 :author_esc: Elias%20Abel
 :mail: admin@meniny.cn
 :desc: an UIAlertController extension.
-:version: 2.0.2
+:version: 2.1.0
 :na: N/A
 :ios: 9.0
 :macos: {na}
 :watchos: {na}
 :tvos: {na}
 :linux: {na}
-:xcode: 9.3
-:swift: 4.1
+:xcode: 10.2
+:swift: 5
 :license: MIT
 :sep: %20%7C%20
 :platform: iOS

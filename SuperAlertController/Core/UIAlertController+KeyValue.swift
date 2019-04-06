@@ -66,7 +66,7 @@ import UIKit
 
 public extension UIAlertController {
     
-    public var attributedTitle: NSAttributedString? {
+    var attributedTitle: NSAttributedString? {
         get {
             return self.value(forKey: "attributedTitle") as? NSAttributedString
         }
@@ -75,7 +75,7 @@ public extension UIAlertController {
         }
     }
     
-    public var attributedMessage: NSAttributedString? {
+    var attributedMessage: NSAttributedString? {
         get {
             return self.value(forKey: "attributedMessage") as? NSAttributedString
         }
@@ -84,7 +84,7 @@ public extension UIAlertController {
         }
     }
     
-    public var contentViewController: UIViewController? {
+    var contentViewController: UIViewController? {
         get {
             return self.value(forKey: "contentViewController") as? UIViewController
         }
@@ -97,7 +97,7 @@ public extension UIAlertController {
         guard let title = self.title else { return }
         let paragraphStyle = NSMutableParagraphStyle.init()
         paragraphStyle.alignment = alignment
-        let attributes: [NSAttributedStringKey: Any] = [
+        let attributes: [NSAttributedString.Key: Any] = [
             .font: font,
             .foregroundColor: color,
             .paragraphStyle: paragraphStyle,
@@ -111,7 +111,7 @@ public extension UIAlertController {
     ///   - title: alert title
     ///   - font: alert title font
     ///   - color: alert title color
-    public func setAttributedTitle(_ title: String?, font: UIFont, color: UIColor, alignment: NSTextAlignment) {
+    func setAttributedTitle(_ title: String?, font: UIFont, color: UIColor, alignment: NSTextAlignment) {
         if title != nil {
             self.title = title
         }
@@ -122,7 +122,7 @@ public extension UIAlertController {
         guard let message = self.message else { return }
         let paragraphStyle = NSMutableParagraphStyle.init()
         paragraphStyle.alignment = alignment
-        let attributes: [NSAttributedStringKey: Any] = [
+        let attributes: [NSAttributedString.Key: Any] = [
             .font: font,
             .foregroundColor: color,
             .paragraphStyle: paragraphStyle,
@@ -137,7 +137,7 @@ public extension UIAlertController {
     ///   - font: alert message font
     ///   - color: alert message color
     ///   - alignment: alert message alignment
-    public func setAttributedMessage(_ message: String?,
+    func setAttributedMessage(_ message: String?,
                                      font: UIFont,
                                      color: UIColor,
                                      alignment: NSTextAlignment = .center) {
@@ -153,7 +153,7 @@ public extension UIAlertController {
     ///   - content: Content ViewController
     ///   - width: width of content viewController
     ///   - height: height of content viewController
-    public func setContentViewController(_ content: UIViewController?, width: CGFloat? = nil, height: CGFloat? = nil) {
+    func setContentViewController(_ content: UIViewController?, width: CGFloat? = nil, height: CGFloat? = nil) {
         guard let vc = content else { return }
         self.contentViewController = vc
         if let height = height {

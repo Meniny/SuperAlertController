@@ -5,7 +5,7 @@ internal extension UIColor {
     
     /// SwifterSwift: https://github.com/SwifterSwift/SwifterSwift
     /// Hexadecimal value string (read-only).
-    internal var hexString: String {
+    var hexString: String {
         let components: [Int] = {
             let c = cgColor.components!
             let components = c.count == 4 ? c : [c[0], c[0], c[0], c[1]]
@@ -16,7 +16,7 @@ internal extension UIColor {
     
     /// SwifterSwift: https://github.com/SwifterSwift/SwifterSwift
     /// Short hexadecimal value string (read-only, if applicable).
-    internal var shortHexString: String? {
+    var shortHexString: String? {
         let string = hexString.replacingOccurrences(of: "#", with: "")
         let chrs = Array(string)
         guard chrs[0] == chrs[1], chrs[2] == chrs[3], chrs[4] == chrs[5] else { return nil }
@@ -24,7 +24,7 @@ internal extension UIColor {
     }
     
     /// Color to Image
-    internal func toImage() -> UIImage {
+    func toImage() -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContextWithOptions(rect.size, true, 0)
         self.setFill()
@@ -41,7 +41,7 @@ internal extension UIColor {
     ///        UIColor.green.rgbComponents.green -> 255
     ///        UIColor.blue.rgbComponents.blue -> 255
     ///
-    internal var rgbComponents: (red: Int, green: Int, blue: Int) {
+    var rgbComponents: (red: Int, green: Int, blue: Int) {
         var components: [CGFloat] {
             let c = cgColor.components!
             if c.count == 4 {
@@ -62,7 +62,7 @@ internal extension UIColor {
     ///        UIColor.green.rgbComponents.green -> 1.0
     ///        UIColor.blue.rgbComponents.blue -> 1.0
     ///
-    internal var cgFloatComponents: (red: CGFloat, green: CGFloat, blue: CGFloat) {
+    var cgFloatComponents: (red: CGFloat, green: CGFloat, blue: CGFloat) {
         var components: [CGFloat] {
             let c = cgColor.components!
             if c.count == 4 {
@@ -78,7 +78,7 @@ internal extension UIColor {
     
     /// SwifterSwift: https://github.com/SwifterSwift/SwifterSwift
     /// Get components of hue, saturation, and brightness, and alpha (read-only).
-    internal var hsbaComponents: (hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) {
+    var hsbaComponents: (hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) {
         var h: CGFloat = 0.0
         var s: CGFloat = 0.0
         var b: CGFloat = 0.0
@@ -92,14 +92,14 @@ internal extension UIColor {
 // MARK: - Initializers
 internal extension UIColor {
     
-    internal convenience init(hex: Int, alpha: CGFloat) {
+    convenience init(hex: Int, alpha: CGFloat) {
         let r = CGFloat((hex & 0xFF0000) >> 16)/255
         let g = CGFloat((hex & 0xFF00) >> 8)/255
         let b = CGFloat(hex & 0xFF)/255
         self.init(red: r, green: g, blue: b, alpha: alpha)
     }
     
-    internal convenience init(hex: Int) {
+    convenience init(hex: Int) {
         self.init(hex: hex, alpha: 1.0)
     }
     
@@ -109,7 +109,7 @@ internal extension UIColor {
      - parameter hexString: HEX String in "#363636" format
      - returns: UIColor from HexString
      */
-    internal convenience init(hexString: String) {
+    convenience init(hexString: String) {
         
         let hexString: String       = (hexString as NSString).trimmingCharacters(in: .whitespacesAndNewlines)
         let scanner                 = Scanner(string: hexString as String)

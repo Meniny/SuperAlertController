@@ -69,6 +69,6 @@ public typealias SuperAlertController = UIAlertController
 
 public extension UIAlertController {
     
-    public static var width: CGFloat = 270
+    static var width: CGFloat = 270
 }
 
